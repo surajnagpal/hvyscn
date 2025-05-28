@@ -5,25 +5,31 @@ import Image from "next/image"
 
 const team = [
   {
-    name: "Alex Chen",
+    name: "Wali Muhammad",
     role: "Creative Director",
     bio: "Visionary designer with 10+ years in streetwear and digital fashion.",
     image: "/placeholder.svg?height=300&width=300",
   },
   {
-    name: "Maya Rodriguez",
+    name: "Suraj Nagpal",
     role: "Head of Design",
     bio: "Former Nike designer bringing athletic innovation to street culture.",
     image: "/placeholder.svg?height=300&width=300",
   },
   {
-    name: "Jordan Kim",
+    name: "Sanay Lele",
     role: "Brand Strategist",
     bio: "Marketing genius who understands the pulse of Gen Z fashion.",
     image: "/placeholder.svg?height=300&width=300",
   },
   {
-    name: "Sam Taylor",
+    name: "Ron Talukdar",
+    role: "Tech Lead",
+    bio: "Full-stack developer building the future of fashion e-commerce.",
+    image: "/placeholder.svg?height=300&width=300",
+  },
+    {
+    name: "Hardik Hardik",
     role: "Tech Lead",
     bio: "Full-stack developer building the future of fashion e-commerce.",
     image: "/placeholder.svg?height=300&width=300",
