@@ -5,33 +5,57 @@ import Image from "next/image"
 
 const team = [
   {
-    name: "Wali Muhammad",
-    role: "Creative Director",
-    bio: "Visionary designer with 10+ years in streetwear and digital fashion.",
-    image: "/placeholder.svg?height=300&width=300",
+    name: "Muhammod Wali Mussa",
+    role: "Managing Director",
+    bio: "Leading the vision and strategy, ensuring innovation and growth across all departments.",
+    image: "/teamImages/wali.jpeg",
   },
   {
     name: "Suraj Nagpal",
-    role: "Head of Design",
-    bio: "Former Nike designer bringing athletic innovation to street culture.",
+    role: "Director",
+    bio: "Driving design excellence and blending athletic performance with streetwear culture.",
+    image: "/teamImages/suraj.jpeg",
+  },
+  {
+    name: "Dhruwwark Ron Talukdar",
+    role: "Director",
+    bio: "Crafting impactful marketing strategies to connect the brand deeply with Gen Z audiences.",
+    image: "/teamImages/ron.jpeg",
+  },
+  {
+    name: "Abdur Raafae Tahir",
+    role: "Director",
+    bio: "Overseeing technology and innovation to deliver seamless e-commerce solutions.",
     image: "/placeholder.svg?height=300&width=300",
   },
   {
     name: "Sanay Lele",
-    role: "Brand Strategist",
-    bio: "Marketing genius who understands the pulse of Gen Z fashion.",
+    role: "Head of Marketing",
+    bio: "Leading marketing campaigns and brand growth through data-driven insights and creativity.",
+    image: "/teamImages/sanay.jpeg",
+  },
+  {
+    name: "Hardik Malhotra",
+    role: "Head of Sales",
+    bio: "Driving sales strategy and partnerships to expand market presence and revenue.",
+    image: "/teamImages/hardik.jpeg",
+  },
+  {
+    name: "Ankush Koshal",
+    role: "Head of Finance",
+    bio: "Managing financial planning, budgeting, and ensuring sustainable business growth.",
     image: "/placeholder.svg?height=300&width=300",
   },
   {
-    name: "Ron Talukdar",
+    name: "Alexandros Baladakis",
     role: "Tech Lead",
-    bio: "Full-stack developer building the future of fashion e-commerce.",
-    image: "/placeholder.svg?height=300&width=300",
+    bio: "Leading the development team to build scalable, robust fashion e-commerce platforms.",
+    image: "/teamImages/alex.jpeg",
   },
-    {
-    name: "Hardik Hardik",
+  {
+    name: "Malik Lethabo Kgoboge",
     role: "Tech Lead",
-    bio: "Full-stack developer building the future of fashion e-commerce.",
+    bio: "Driving technical innovation and ensuring top-notch performance in all tech projects.",
     image: "/placeholder.svg?height=300&width=300",
   },
 ]
@@ -42,12 +66,12 @@ export default function Team() {
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Our <span className="neon-text">Team</span>
+            <span className="neon-text">Our Team</span>
           </h1>
           <p className="text-xl text-gray-300">The minds behind the future of streetwear</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <motion.div
               key={member.name}
@@ -64,6 +88,8 @@ export default function Team() {
                   alt={member.name}
                   width={200}
                   height={200}
+                  quality={100}
+                  unoptimized 
                   className="w-32 h-32 rounded-full mx-auto object-cover border-2 border-cyan-400"
                 />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-t from-cyan-400/20 to-transparent" />

@@ -40,7 +40,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
           className="text-6xl md:text-8xl font-bold mb-6"
         >
-          <span className="neon-text">FUTURE</span>
+          <span className="neon-text">FUTURE MEIN AYEGI BOYS RELAX</span>
           <br />
           <span className="text-white">STREETWEAR</span>
         </motion.h1>
