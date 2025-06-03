@@ -83,7 +83,7 @@ export default function Services() {
       <div className="max-w-6xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Our <span className="neon-text">Services</span>
+            <span className="neon-text">Our Services</span>
           </h1>
           <p className="text-xl text-gray-300">Bringing your vision to life with custom solutions</p>
         </motion.div>
@@ -181,15 +181,16 @@ export default function Services() {
                           required
                           value={formData.productType}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 text-white border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
+                          style={{ colorScheme: 'dark' }}
                         >
-                          <option value="">Select product type</option>
-                          <option value="t-shirts">T-Shirts</option>
-                          <option value="hoodies">Hoodies</option>
-                          <option value="jackets">Jackets</option>
-                          <option value="accessories">Accessories</option>
-                          <option value="multiple">Multiple Items</option>
-                          <option value="other">Other</option>
+                          <option value="" disabled hidden>Select product type</option>
+                          <option className="text-black" value="t-shirts">T-Shirts</option>
+                          <option className="text-black" value="hoodies">Hoodies</option>
+                          <option className="text-black" value="jackets">Jackets</option>
+                          <option className="text-black" value="accessories">Accessories</option>
+                          <option className="text-black" value="multiple">Multiple Items</option>
+                          <option className="text-black" value="other">Other</option>
                         </select>
                       </div>
 
@@ -200,32 +201,35 @@ export default function Services() {
                           required
                           value={formData.quantity}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 text-white border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
+                          style={{ colorScheme: 'dark' }}
                         >
-                          <option value="">Select quantity</option>
-                          <option value="1-25">1-25 pieces</option>
-                          <option value="26-50">26-50 pieces</option>
-                          <option value="51-100">51-100 pieces</option>
-                          <option value="101-500">101-500 pieces</option>
-                          <option value="500+">500+ pieces</option>
+                          <option value="" disabled hidden>Select quantity</option>
+                          <option className="text-black" value="1-25">1–25 pieces</option>
+                          <option className="text-black" value="26-50">26–50 pieces</option>
+                          <option className="text-black" value="51-100">51–100 pieces</option>
+                          <option className="text-black" value="101-500">101–500 pieces</option>
+                          <option className="text-black" value="500+">500+ pieces</option>
                         </select>
                       </div>
 
                       <div>
                         <label className="block text-sm font-medium mb-2">Budget Range</label>
-                        <select
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
-                        >
-                          <option value="">Select budget range</option>
-                          <option value="under-500">Under $500</option>
-                          <option value="500-1000">$500 - $1,000</option>
-                          <option value="1000-2500">$1,000 - $2,500</option>
-                          <option value="2500-5000">$2,500 - $5,000</option>
-                          <option value="5000+">$5,000+</option>
-                        </select>
+                          <select
+                            name="budget"
+                            value={formData.budget}
+                            onChange={handleInputChange}
+                            className="w-full px-4 py-3 bg-white/5 text-white border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
+                            style={{ colorScheme: 'dark' }} 
+                          >
+                            <option value="" disabled hidden>Select budget range</option>
+                            <option className="text-black" value="under-500">Under $500</option>
+                            <option className="text-black" value="500-1000">$500 - $1,000</option>
+                            <option className="text-black" value="1000-2500">$1,000 - $2,500</option>
+                            <option className="text-black" value="2500-5000">$2,500 - $5,000</option>
+                            <option className="text-black" value="5000+">$5,000+</option>
+                          </select>
+
                       </div>
                     </div>
 
@@ -237,11 +241,12 @@ export default function Services() {
                         value={formData.timeline}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:border-cyan-400 focus:outline-none transition-colors"
+                        style={{ colorScheme: 'dark' }} 
                       >
-                        <option value="">Select timeline</option>
-                        <option value="rush">Rush (1-2 weeks)</option>
-                        <option value="standard">Standard (3-4 weeks)</option>
-                        <option value="flexible">Flexible (5+ weeks)</option>
+                        <option value=""disabled>Select timeline</option>
+                        <option className="text-black" value="rush">Rush (1-2 weeks)</option>
+                        <option className="text-black" value="standard">Standard (3-4 weeks)</option>
+                        <option className="text-black" value="flexible">Flexible (5+ weeks)</option>
                       </select>
                     </div>
 
