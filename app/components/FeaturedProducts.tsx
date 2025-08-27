@@ -4,34 +4,10 @@ import { motion } from "framer-motion"
 import ProductCard from "./ProductCard"
 
 const featuredProducts = [
-  {
-    id: "1",
-    name: "Neon Hoodie",
-    price: 89,
-    image: "/placeholder.svg?height=400&width=400",
-    category: "Hoodies",
-  },
-  {
-    id: "2",
-    name: "Cyber Tee",
-    price: 45,
-    image: "/placeholder.svg?height=400&width=400",
-    category: "T-Shirts",
-  },
-  {
-    id: "3",
-    name: "Future Jacket",
-    price: 159,
-    image: "/placeholder.svg?height=400&width=400",
-    category: "Jackets",
-  },
-  {
-    id: "4",
-    name: "Tech Pants",
-    price: 99,
-    image: "/placeholder.svg?height=400&width=400",
-    category: "Pants",
-  },
+  { id: "2", name: "Cyber Tee", price: 45, image: "/Products/Tee.png", category: "T-Shirts" },
+  { id: "3", name: "Future Jacket", price: 159, image: "/Products/Jacket.png", category: "Jackets" },
+  { id: "5", name: "Hologram Shirt", price: 55, image: "/Products/6.png", category: "T-Shirts" },
+  { id: "6", name: "Matrix Hoodie", price: 95, image: "/Products/5.png", category: "Hoodies" },
 ]
 
 export default function FeaturedProducts() {
@@ -45,7 +21,7 @@ export default function FeaturedProducts() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="neon-text">Products</span>
+            <span className="neon-text">Featured Products</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">Discover our latest drops and most popular pieces</p>
         </motion.div>

@@ -6,7 +6,6 @@ import ProductCard from "../components/ProductCard"
 import { Filter } from "lucide-react"
 
 const products = [
-  { id: "1", name: "Neon Hoodie", price: 89, image: "/Products/Men's Hoodie.png", category: "Hoodies" },
   { id: "2", name: "Cyber Tee", price: 45, image: "/Products/Tee.png", category: "T-Shirts" },
   { id: "3", name: "Future Jacket", price: 159, image: "/Products/Jacket.png", category: "Jackets" },
   { id: "5", name: "Hologram Shirt", price: 55, image: "/Products/6.png", category: "T-Shirts" },
