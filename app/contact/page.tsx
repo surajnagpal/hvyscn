@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="neon-text">Contact</span> Us
+            <span className="neon-text">Contact Us</span> 
           </h1>
           <p className="text-xl text-gray-300">Ready to join the future? Let's connect.</p>
         </motion.div>
@@ -77,11 +77,11 @@ export default function Contact() {
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-cyan-400" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+44 7377 222031</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-cyan-400" />
-                  <span>Los Angeles, CA</span>
+                  <span>London, UK</span>
                 </div>
               </div>
             </div>

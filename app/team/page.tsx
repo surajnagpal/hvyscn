@@ -13,7 +13,7 @@ const team = [
   {
     name: "Suraj Nagpal",
     role: "Director",
-    bio: "Driving design excellence and blending athletic performance with streetwear culture.",
+    bio: "Driving design excellence and tech aspects.",
     image: "/teamImages/suraj.jpeg",
   },
   {
@@ -22,12 +22,12 @@ const team = [
     bio: "Crafting impactful marketing strategies to connect the brand deeply with Gen Z audiences.",
     image: "/teamImages/ron.jpeg",
   },
-  {
-    name: "Abdur Raafae Tahir",
-    role: "Director",
-    bio: "Overseeing technology and innovation to deliver seamless e-commerce solutions.",
-    image: "/placeholder.svg?height=300&width=300",
-  },
+  // {
+  //   name: "Abdur Raafae Tahir",
+  //   role: "Director",
+  //   bio: "Overseeing technology and innovation to deliver seamless e-commerce solutions.",
+  //   image: "/placeholder.svg?height=300&width=300",
+  // },
   {
     name: "Sanay Lele",
     role: "Head of Marketing",
@@ -40,12 +40,12 @@ const team = [
     bio: "Driving sales strategy and partnerships to expand market presence and revenue.",
     image: "/teamImages/hardik.jpeg",
   },
-  {
-    name: "Ankush Koshal",
-    role: "Head of Finance",
-    bio: "Managing financial planning, budgeting, and ensuring sustainable business growth.",
-    image: "/placeholder.svg?height=300&width=300",
-  },
+  // {
+  //   name: "Ankush Koshal",
+  //   role: "Head of Finance",
+  //   bio: "Managing financial planning, budgeting, and ensuring sustainable business growth.",
+  //   image: "/placeholder.svg?height=300&width=300",
+  // },
   {
     name: "Alexandros Baladakis",
     role: "Tech Lead",
@@ -56,7 +56,7 @@ const team = [
     name: "Malik Lethabo Kgoboge",
     role: "Tech Lead",
     bio: "Driving technical innovation and ensuring top-notch performance in all tech projects.",
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/teamImages/Malik.jpeg",
   },
 ]
 
@@ -83,14 +83,15 @@ export default function Team() {
               className="glass rounded-xl p-6 text-center hover:neon-glow transition-all duration-500"
             >
               <div className="relative mb-6">
+
                 <Image
                   src={member.image || "/placeholder.svg"}
                   alt={member.name}
-                  width={200}
-                  height={200}
-                  quality={100}
-                  unoptimized 
-                  className="w-32 h-32 rounded-full mx-auto object-cover border-2 border-cyan-400"
+                  width={128} // match your w-32 h-32 in Tailwind (128px)
+                  height={128}
+                  quality={100} // max quality
+                  unoptimized
+                  className="rounded-full mx-auto object-cover border-2 border-cyan-400"
                 />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-t from-cyan-400/20 to-transparent" />
               </div>

@@ -52,6 +52,7 @@ const contentPackages = [
 ]
 
 export default function Services() {
+  const [activePopup, setActivePopup] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState("merchandise")
   const [formData, setFormData] = useState({
     name: "",
@@ -77,7 +78,8 @@ export default function Services() {
     console.log("Form submitted:", formData)
     alert("Thank you! We'll get back to you within 24 hours.")
   }
-
+    
+  
   return (
     <div className="pt-24 pb-16 px-4">
       <div className="max-w-6xl mx-auto">
@@ -333,18 +335,21 @@ export default function Services() {
 
                     <motion.button
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 mt-auto ${
-                        pkg.popular
-                          ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-black hover:from-purple-500 hover:to-cyan-500"
-                          : "glass hover:bg-white/10 text-white"
-                      }`}
-                    >
-                      Get Started
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setActivePopup(pkg.name)} // <-- show popup
+                        className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 mt-auto ${
+                          pkg.popular
+                            ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-black hover:from-purple-500 hover:to-cyan-500"
+                            : "glass hover:bg-white/10 text-white"
+                        }`}
+                      >
+                        Get Started
                     </motion.button>
+
                   </motion.div>
                 ))}
               </div>
+
 
               {/* Contact Info */}
               <div className="glass rounded-xl p-8 text-center">
@@ -367,12 +372,47 @@ export default function Services() {
                     className="inline-flex items-center justify-center px-6 py-3 glass rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    +1 (555) 123-4567
+                    +44 7377 222031
                   </motion.a>
                 </div>
               </div>
             </motion.div>
           )}
+
+          {/* Popup */}
+                {activePopup && (
+                  <div className="fixed inset-0 flex items-center justify-center bg-black/70 backdrop-blur-sm z-50">
+                    <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-8 max-w-md mx-4 text-center text-white shadow-2xl border border-gray-700/50 relative overflow-hidden">
+                      {/* Animated background glow */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
+                      
+                      <div className="relative z-10">
+                        {/* Icon */}
+                        <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        </div>
+                        
+                        <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                          Orders Paused
+                        </h2>
+                        <p className="mb-8 text-gray-300 leading-relaxed">
+                          We have currently paused orders. Please check back later for production availability.
+                        </p>
+                        
+                        <button
+                          onClick={() => setActivePopup(false)}
+                          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:from-cyan-400 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                        >
+                          Got it
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+
         </AnimatePresence>
       </div>
     </div>

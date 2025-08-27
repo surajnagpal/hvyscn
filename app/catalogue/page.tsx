@@ -6,17 +6,15 @@ import ProductCard from "../components/ProductCard"
 import { Filter } from "lucide-react"
 
 const products = [
-  { id: "1", name: "Neon Hoodie", price: 89, image: "/placeholder.svg?height=400&width=400", category: "Hoodies" },
-  { id: "2", name: "Cyber Tee", price: 45, image: "/placeholder.svg?height=400&width=400", category: "T-Shirts" },
-  { id: "3", name: "Future Jacket", price: 159, image: "/placeholder.svg?height=400&width=400", category: "Jackets" },
-  { id: "4", name: "Tech Pants", price: 99, image: "/placeholder.svg?height=400&width=400", category: "Pants" },
-  { id: "5", name: "Hologram Shirt", price: 55, image: "/placeholder.svg?height=400&width=400", category: "T-Shirts" },
-  { id: "6", name: "Matrix Hoodie", price: 95, image: "/placeholder.svg?height=400&width=400", category: "Hoodies" },
-  { id: "7", name: "Quantum Jacket", price: 179, image: "/placeholder.svg?height=400&width=400", category: "Jackets" },
-  { id: "8", name: "Digital Shorts", price: 69, image: "/placeholder.svg?height=400&width=400", category: "Shorts" },
+  { id: "1", name: "Neon Hoodie", price: 89, image: "/Products/Men's Hoodie.png", category: "Hoodies" },
+  { id: "2", name: "Cyber Tee", price: 45, image: "/Products/Tee.png", category: "T-Shirts" },
+  { id: "3", name: "Future Jacket", price: 159, image: "/Products/Jacket.png", category: "Jackets" },
+  { id: "5", name: "Hologram Shirt", price: 55, image: "/Products/6.png", category: "T-Shirts" },
+  { id: "6", name: "Matrix Hoodie", price: 95, image: "/Products/5.png", category: "Hoodies" },
+  { id: "7", name: "Quantum Jacket", price: 179, image: "/Products/7.png", category: "Jackets" },
 ]
 
-const categories = ["All", "Hoodies", "T-Shirts", "Jackets", "Pants", "Shorts"]
+const categories = ["All", "Hoodies", "T-Shirts", "Jackets"]
 
 export default function Catalogue() {
   const [selectedCategory, setSelectedCategory] = useState("All")
